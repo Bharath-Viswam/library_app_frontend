@@ -1,0 +1,18 @@
+ .addbook{
+    margin-top: 100px;
+    width: 750px;
+    background: rgb(0, 0, 0,0.8);
+    color: white;
+}
+.card
+{
+    
+      width: 700px;
+  height:550px;
+    margin-top: 100px;
+    background: black;
+    opacity: .75;
+    color: white;
+
+
+} 

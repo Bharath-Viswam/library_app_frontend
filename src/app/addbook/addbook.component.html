@@ -1,0 +1,42 @@
+<form class="container addbook text-center border border-light p-5 justify-content-center" action="NewProduct()"
+    method="POST">
+
+
+
+    <p class="h4 mb-4">Add Book Form</p>
+
+    <!-- Title -->
+    <input id="title" name="title" type="text" class="form-control mb-4" placeholder="Book Name"
+        [(ngModel)]="productItem.title">
+
+    <br>
+    <!-- Author -->
+    <input id="author" name="author" type="text" class="form-control mb-4" placeholder="Author Name"
+        [(ngModel)]="productItem.author">
+
+    <br>
+    <!-- Image -->
+    <input id="image" name="image" type="file" class="form-control mb-4" placeholder="Image URL"
+        [(ngModel)]="productItem.image">
+
+
+    <br>
+    <!-- About -->
+    <div class="form-group">
+        <textarea id="about" name="about" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+            placeholder="About Book (less than 150 words)" [(ngModel)]="productItem.about"></textarea>
+    </div>
+
+    <br>
+    <input id="rating" name="rating" type="number" class="form-control mb-4" placeholder="rating"
+        [(ngModel)]="productItem.rating">
+
+
+    <!-- Send button -->
+    <button id="addbtn" class="btn btn-success" type="button" (click)="NewProduct()">Add Book</button>
+
+
+</form>
+<!-- Default form contact -->
+
+<br>

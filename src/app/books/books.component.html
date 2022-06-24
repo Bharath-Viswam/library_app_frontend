@@ -1,0 +1,46 @@
+<div class='card'>
+    <div class='card-header'>
+        Books-list
+    </div>
+    <a routerLink="/Books" style="text-decoration: none;color: black;">Go Back<i
+            class="fa-solid fa-circle-arrow-left"></i></a>
+    <div class='card-body'>
+        <div class='table-responsive'>
+            <table class='table' *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                        <th>
+                            <button class='btn btn-primary' (click)='toggleImage()'>
+                                {{showImage? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <!-- <th>Date</th> -->
+                        <th>About</th>
+                        <th>Rating</th>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td><img *ngIf='showImage' [src]='product.image' [style.width.px]='imageWidth'
+                                [style.margin.px]='imageMargin'></td>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.author }}</td>
+                        <!-- <td>{{ product.releasedate }}</td> -->
+                        <td>{{ product.about }}</td>
+                        <td>{{product.rating}}</td>
+                        <td>
+                            <button class="btn btn-warning" style="cursor:pointer" (click)="editProduct(product)"
+                                style="margin-left: 20px;"> Edit</button>
+                            <button class="btn btn-danger" style="cursor:pointer" (click)="deleteProduct(product)">
+                                Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

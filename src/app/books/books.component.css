@@ -1,0 +1,5 @@
+.card{
+    background-image: url('../../../../../backend/public/images/bg3.jpg');
+    background-size: cover;
+    height: 768px;
+}
